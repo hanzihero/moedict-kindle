@@ -17,10 +17,15 @@
 
     <%= for entry <- entries do %>
       <idx:entry name="chinese" scriptable="yes" spell="yes">
-        <idx:orth><%= entry.headword %></idx:orth>
+        <idx:orth><%= entry.char %></idx:orth>
         
         <p><%= entry.pinyin %></p>
+        
+        <%= for def <- entry.definitions do %>
+        <p><%= if def.type do %>(<%= def.type %>) <% end %><%= def.definition %></p>
+        <% end %>
       </idx:entry>
+      <hr/>
     <% end %>
 
   </mbp:frameset>
