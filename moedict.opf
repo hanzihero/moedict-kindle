@@ -14,13 +14,13 @@
   <manifest>
     <item href="moedict.png" id="my-cover-image" media-type="image/png" />
     <item id="content"
-          href="content.html"
+          href="moedict.html"
           media-type="application/xhtml+xml" />
   </manifest>
   <spine>
     <itemref idref="content"/>
   </spine>
   <guide>
-    <reference type="index" title="IndexName" href="content.html"/>
+    <reference type="index" title="IndexName" href="moedict.html"/>
   </guide>
 </package>
