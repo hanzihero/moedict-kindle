@@ -1,0 +1,30 @@
+<html xmlns:math="http://exslt.org/math" xmlns:svg="http://www.w3.org/2000/svg"
+  xmlns:tl="https://kindlegen.s3.amazonaws.com/AmazonKindlePublishingGuidelines.pdf" xmlns:saxon="http://saxon.sf.net/"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:cx="https://kindlegen.s3.amazonaws.com/AmazonKindlePublishingGuidelines.pdf"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:mbp="https://kindlegen.s3.amazonaws.com/AmazonKindlePublishingGuidelines.pdf"
+  xmlns:mmc="https://kindlegen.s3.amazonaws.com/AmazonKindlePublishingGuidelines.pdf"
+  xmlns:idx="https://kindlegen.s3.amazonaws.com/AmazonKindlePublishingGuidelines.pdf">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+<body>
+
+  <mbp:frameset>
+
+    <%= for entry <- entries do %>
+      <idx:entry name="chinese" scriptable="yes" spell="yes">
+        <idx:orth><%= entry.headword %></idx:orth>
+        
+        <p><%= entry.pinyin %></p>
+      </idx:entry>
+    <% end %>
+
+  </mbp:frameset>
+
+</body>
+
+</html>
