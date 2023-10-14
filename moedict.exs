@@ -14,5 +14,5 @@ entries = [
 html = EEx.eval_file("moedict.html.eex", entries: entries)
 File.write!("moedict.html", html)
 
-IO.puts("hi")
-System.cmd(kindlegen_path, ["-c0", "-verbose", "moeadict.opf"])
+{output, 0} = System.cmd(kindlegen_path, ["-c0", "moedict.opf"])
+IO.puts(output)
