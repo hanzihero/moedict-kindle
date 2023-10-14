@@ -30,7 +30,8 @@ entries =
               definition: d["f"],
               type: d["type"],
               examples: d["e"],
-              quotes: d["q"]
+              quotes: d["q"],
+              similar: d["s"]
             }
           end)
       }
