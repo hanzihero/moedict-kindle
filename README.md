@@ -12,7 +12,7 @@ Best of all, it is entirely free!
 
 ![moedict usage screenshot](screenshot.png)
 
-## Usage
+## Installation
 
 1. [Download](https://github.com/hanzihero/moedict-kindle/releases/download/2023-10-15/moedict.mobi) `moedict.mobi`.
 2. Drop it in `documents/dictionaries/` in your Kindle.
@@ -33,8 +33,8 @@ https://www.amazon.com/Kindle-Previewer/b?ie=UTF8&node=21381691011
 
 ### Building
 
-1. Run `elixir moedict.exs` to generate `moedict.html`
-2. Run `./kindlegen-mac.sh` to generate `moedict.mobi`. If not using Mac, you can simply get `kindlegen` directly and run `kindlegen -c0 output/moedict.opf`.
+1. Run `elixir moedict.exs` to generate the `xhtml` and `opf` files.
+2. Run `./kindlegen-mac.sh` to generate `moedict.mobi`. If not using Mac, you can simply get `kindlegen` directly and run it with the same args within that shell script.
 
 ### Testing/verifying
 
