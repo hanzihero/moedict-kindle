@@ -4,7 +4,7 @@ To my knowledge, it is the best Chinese-Chinese dictionary that is available in 
 
 Best of all, it is entirely free!
 
-![moedict usage screenshot](screenshot.jpg)
+![moedict usage screenshot](screenshot.png)
 
 ## Usage
 
