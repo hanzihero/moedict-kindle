@@ -14,7 +14,7 @@ Best of all, it is entirely free!
 
 ## Usage
 
-1. Download `moedict.mobi` from the latest [release]().
+1. [Download](https://github.com/hanzihero/moedict-kindle/releases/download/2023-10-15/moedict.mobi) `moedict.mobi`.
 2. Drop it in `documents/dictionaries/` in your Kindle.
 3. On Kindle, navigate to `Settings` > `Languages and Dictionaries` > `Dictionaries`
 4. Set MOEDICT as the default for Chinese language. 
