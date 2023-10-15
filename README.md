@@ -1,6 +1,6 @@
-> 👋 Looking to learn traditional Chinese characters? 
+> **👋 Looking to learn traditional Chinese characters?**
 > 
-> Check out [HanziHero](https://hanzihero.com), a web application that leverages mnemonics and spaced repetition to make learning Chinese characters a breeze. 🎉
+> Check out **[HanziHero](https://hanzihero.com)**, a web application that leverages **mnemonics** and **spaced repetition** to make learning Chinese characters a *breeze*. 🎉
 
 # moedict-kindle
 
