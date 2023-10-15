@@ -22,7 +22,7 @@
         <p><%= entry.pinyin %></p>
         
         <%= for def <- entry.definitions do %>
-        <p><%= if def.type do %>(<%= def.type %>) <% end %><%= def.definition %></p>
+        <p><%= if def.type do %>(<%= def.type %>) <% end %><%= def.definition %><%= for example <- def.examples do %> <%= example %><% end %></p>
         <% end %>
       </idx:entry>
       <hr/>

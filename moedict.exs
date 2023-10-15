@@ -1,15 +1,11 @@
 Mix.install([:jason])
 
-kindlegen_path = "/Applications/Kindle Previewer 3.app/Contents/lib/fc/bin//kindlegen"
-
-if !File.exists?(kindlegen_path) do
-  raise("kindlegen not found at #{kindlegen_path}")
-end
-
 # this is needed if using a.txt directly
 # clean = fn s ->
 #   String.replace(s || "", ["~", "`"], "")
 # end
+
+IO.puts("Processing entries in a-clean.txt")
 
 entries =
   File.stream!("a-clean.txt")
@@ -29,7 +25,7 @@ entries =
             %{
               definition: d["f"],
               type: d["type"],
-              examples: d["e"],
+              examples: d["e"] || [],
               quotes: d["q"],
               synonyms: d["s"],
               antonyms: d["a"]
@@ -39,10 +35,6 @@ entries =
     end)
   end)
 
+IO.puts("Generating moedict.html")
 html = EEx.eval_file("moedict.html.eex", entries: entries)
 File.write!("moedict.html", html)
-
-IO.puts("Finished generating moedict.html")
-IO.puts("Running kindlegen")
-
-System.cmd(kindlegen_path, ["-c0", "moedict.opf"], into: IO.stream())
