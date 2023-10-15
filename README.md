@@ -1,12 +1,13 @@
 ## Requisites
 
-Must install Kindle Previewer 3 as this contains `kindlegen` needed for generating the mobi file.
+For Mac, must install Kindle Previewer 3 as this contains `kindlegen` needed for generating the mobi file.
 
 https://www.amazon.com/Kindle-Previewer/b?ie=UTF8&node=21381691011
 
-## Usage
+## Building
 
-Just run `elixir moedict.exs` from the command line.
+1. Run `elixir moedict.exs` to generate `moedict.html`
+2. Run `./kindlegen-mac.sh` to generate `moedict.mobi`. If not using Mac, you can simply get `kindlegen` directly and run `kindlegen -c2 moedict.opf`.
 
 ## Testing/verifying
 
