@@ -1,3 +1,5 @@
+> Looking to learn traditional Chinese characters? Check out [HanziHero](https://hanzihero.com), a Chinese character learning application that leverages mnemonics and spaced repetition to make learning Chinese characters a breeze. 🎉
+
 moedict-kindle is a traditional Chinese to traditional Chinese Kindle dictionary that uses the data licensed by https://moedict.tw.
 To my knowledge, it is the best Chinese-Chinese dictionary that is available in traditional script for Kindle.
 (If you are available of any alternatives, paid or otherwise, please let me know.)
@@ -28,10 +30,7 @@ https://www.amazon.com/Kindle-Previewer/b?ie=UTF8&node=21381691011
 ### Building
 
 1. Run `elixir moedict.exs` to generate `moedict.html`
-2. Run `./kindlegen-mac.sh` to generate `moedict.mobi`. If not using Mac, you can simply get `kindlegen` directly and run `kindlegen -c0 moedict.opf`.
-
-Note that running kindlegen takes tens of minutes to run on my M1 Macbook Air.
-Because of this, I recommend just generating `moedict.html` when doing styling changes, and only running kindlegen when preparing to sideload onto the Kindle.
+2. Run `./kindlegen-mac.sh` to generate `moedict.mobi`. If not using Mac, you can simply get `kindlegen` directly and run `kindlegen -c0 output/moedict.opf`.
 
 ### Testing/verifying
 

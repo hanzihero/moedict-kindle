@@ -45,11 +45,11 @@ entry_groups =
     {entries, padded_index}
   end)
 
-IO.puts("Generating the moedict.html files")
+IO.puts("Generating the moedict.xhtml files")
 
 Enum.each(entry_groups, fn {entries, index} ->
-  html = EEx.eval_file("moedict.html.eex", entries: entries)
-  File.write!("output/moedict#{index}.html", html)
+  html = EEx.eval_file("moedict.xhtml.eex", entries: entries)
+  File.write!("output/moedict#{index}.xhtml", html)
 end)
 
 IO.puts("Generating moedict.opf file")

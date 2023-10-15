@@ -16,7 +16,7 @@
     
     <%= for index <- indexes do %>
       <item id="content<%= index %>"
-      href="moedict<%= index %>.html"
+      href="moedict<%= index %>.xhtml"
       media-type="application/xhtml+xml" />
     <% end %>
   </manifest>
