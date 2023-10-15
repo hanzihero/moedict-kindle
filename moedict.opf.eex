@@ -13,14 +13,16 @@
   </metadata>
   <manifest>
     <item href="moedict.png" id="my-cover-image" media-type="image/png" />
-    <item id="content"
-          href="moedict.html"
-          media-type="application/xhtml+xml" />
+    
+    <%= for index <- indexes do %>
+      <item id="content<%= index %>"
+      href="moedict<%= index %>.html"
+      media-type="application/xhtml+xml" />
+    <% end %>
   </manifest>
   <spine>
-    <itemref idref="content"/>
+    <%= for index <- indexes do %>
+      <itemref idref="content<%= index %>"/>
+    <% end %>
   </spine>
-  <guide>
-    <reference type="index" title="IndexName" href="moedict.html"/>
-  </guide>
 </package>

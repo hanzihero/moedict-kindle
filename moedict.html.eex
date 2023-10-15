@@ -23,7 +23,7 @@
     <%= for entry <- entries do %>
       <idx:entry name="chinese" scriptable="yes" spell="yes">
         <idx:orth><%= entry.char %></idx:orth>
-        
+
         <strong><%= entry.pinyin %></strong>
 
         <ol>
@@ -32,7 +32,7 @@
             <%= if def.type do %><span class="type"><%= def.type %></span><% end %>
             <span class="def"><%= def.definition %></span>
             <%= for example <- def.examples do %>
-              <span class="example"<%= example %></span>
+              <span class="example"><%= example %></span>
             <% end %>
             <%= if def.quotes do %>
               <div class="quotes">
