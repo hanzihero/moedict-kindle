@@ -19,11 +19,37 @@
       <idx:entry name="chinese" scriptable="yes" spell="yes">
         <idx:orth><%= entry.char %></idx:orth>
         
-        <p><%= entry.pinyin %></p>
-        
-        <%= for def <- entry.definitions do %>
-        <p><%= if def.type do %>(<%= def.type %>) <% end %><%= def.definition %><%= for example <- def.examples do %> <%= example %><% end %></p>
-        <% end %>
+        <span><%= entry.pinyin %></span>
+
+        <ol>
+          <%= for def <- entry.definitions do %>
+          <li>
+            <%= if def.type do %><span class="type"><%= def.type %></span><% end %>
+            <span class="def"><%= def.definition %></span>
+            <%= for example <- def.examples do %>
+              <span class="example"<%= example %></span>
+            <% end %>
+            <%= if def.quotes do %>
+              <div class="quotes">
+                <%= for quote <- def.quotes do %>
+                <div><%= quote %></div>
+                <% end %>
+              </div>
+            <% end %>
+            <%= if def.synonyms do %>
+              <div class="synonyms">
+                <strong>似</strong> <%= def.synonyms %>
+              </div>
+            <% end %>
+            <%= if def.antonyms do %>
+              <div class="antonyms">
+                <strong>反</strong> <%= def.antonyms %>
+              </div>
+            <% end %>
+          </li>
+          <% end %>
+        </ol>
+
       </idx:entry>
       <hr/>
     <% end %>

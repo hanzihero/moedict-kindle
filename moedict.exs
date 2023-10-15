@@ -14,6 +14,7 @@ entries =
     [_, _, json] = String.split(l, " ", parts: 3)
     Jason.decode!(json)
   end)
+  |> Enum.take(100)
   # |> Stream.filter(&(&1["t"] == "好"))
   |> Enum.flat_map(fn c ->
     Enum.map(c["h"], fn h ->
