@@ -1,4 +1,6 @@
-> Looking to learn traditional Chinese characters? Check out [HanziHero](https://hanzihero.com), a Chinese character learning application that leverages mnemonics and spaced repetition to make learning Chinese characters a breeze. 🎉
+> 👋 Looking to learn traditional Chinese characters? Check out [HanziHero](https://hanzihero.com), a Chinese character learning application that leverages mnemonics and spaced repetition to make learning Chinese characters a breeze. 🎉
+
+# moedict-kindle
 
 moedict-kindle is a traditional Chinese to traditional Chinese Kindle dictionary that uses the data licensed by https://moedict.tw.
 To my knowledge, it is the best Chinese-Chinese dictionary that is available in traditional script for Kindle.
