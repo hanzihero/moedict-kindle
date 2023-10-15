@@ -31,7 +31,8 @@ entries =
               type: d["type"],
               examples: d["e"],
               quotes: d["q"],
-              similar: d["s"]
+              synonyms: d["s"],
+              antonyms: d["a"]
             }
           end)
       }
