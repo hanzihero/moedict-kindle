@@ -47,10 +47,13 @@ entry_groups =
 
 IO.puts("Generating the moedict.xhtml files")
 
-Enum.each(entry_groups, fn {entries, index} ->
-  html = EEx.eval_file("moedict.xhtml.eex", entries: entries)
-  File.write!("output/moedict#{index}.xhtml", html)
+Enum.map(entry_groups, fn {entries, index} ->
+  Task.async(fn ->
+    html = EEx.eval_file("moedict.xhtml.eex", entries: entries)
+    File.write!("output/moedict#{index}.xhtml", html)
+  end)
 end)
+|> Task.await_many(60000)
 
 IO.puts("Generating moedict.opf file")
 

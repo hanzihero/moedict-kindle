@@ -8,11 +8,10 @@
     <x-metadata>
       <DictionaryInLanguage>zh</DictionaryInLanguage>
       <DictionaryOutLanguage>zh</DictionaryOutLanguage>
-      <DefaultLookupIndex>default</DefaultLookupIndex>
     </x-metadata>
   </metadata>
   <manifest>
-    <item href="moedict.png" id="my-cover-image" media-type="image/png" />
+    <item href="../moedict.png" id="my-cover-image" media-type="image/png" />
     
     <%= for index <- indexes do %>
       <item id="content<%= index %>"
